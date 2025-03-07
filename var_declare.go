@@ -35,5 +35,4 @@ func var_declaration() {
 	pl("Value of chnagedToint is: ", chnagedToint)
 	var e bool = true
 	pl("Value of e is: ", e)		
-
 }
