@@ -25,3 +25,14 @@ func testme2(num int16) {
 		fmt.Println("Number is positive")
 	}
 }
+
+func testme3(num int16) {
+	switch num { //this is switch condition statement 
+	case 0:
+		fmt.Println("Number is zero")
+	case 1, 2, 3, 4, 5:
+		fmt.Println("Number is between 1 and 5")
+	default:
+		fmt.Println("Number is greater than 5")
+	}
+}
