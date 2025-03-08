@@ -29,6 +29,8 @@ func main() {
 	println(len(xx))
 	*/
 	
-	//bro.tester()
-
+	testme2(10)
+	testme3(0)
+	arrayTest()
+	sliceTest()
 }

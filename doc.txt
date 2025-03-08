@@ -1,8 +1,11 @@
 go mod init name //to create go project
 
+go working in acsii 
 every go files is package
 to use other files(package) import the package name in the 1st line of the file and main is the entry point
 have to use var if its decalred
 
 complier dont throw error in run time
+
+array in go is fixed Length, same data type, indexable (for sure), save in contiguous memory location
 
