@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	//"strings"
 	//"hello/bro"
 )
 
@@ -33,4 +34,9 @@ func main() {
 	testme3(0)
 	arrayTest()
 	sliceTest()
+
+	//var text string = "Hello, World, World"
+	//text2 := strings.Replace(text, "World", "Suresh", -1)
+	//fmt.Println(text2)
+
 }

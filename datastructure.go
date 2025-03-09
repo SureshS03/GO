@@ -17,7 +17,7 @@ func arrayTest(){
 	arr2 := [3]int32{10, 20, 30} //this is short hand declaration of array and it will be initialized with the given values
 	fmt.Println("arr2 =",arr2)
 
-	arr3 := [...]int32{10, 20, 30} //this is also short hand declaration but it will automatically calculate the size of the array
+	arr3 := [...]int32{10, 20, 30, 40, 50} //this is also short hand declaration but it will automatically calculate the size of the array
 	fmt.Println("arr3 =",arr3)
 
 	//to know the memory address of the array
@@ -36,7 +36,7 @@ func sliceTest(){
 	//append will add the value in the slice and if the slice is full then it will create the new slice with increased the size of the old slice and copy the old slice values to the new slice
 	//so we have give a new variable to the slice to store the new slice
 	slice = append(slice, 50, 60, 70) //we can add multiple values in the slice
-	fmt.Println("slice 0 to 1=",slice[0:3]) //we can get the values from the slice by using the index
+	fmt.Println("slice 0 to 2 =",slice[0:3]) //we can get the values from the slice by using the index
 	fmt.Println("slice[5:]=",slice[5:]) //we can get the values from the slice by using the index
 	fmt.Println("slice[:5]=",slice[:5]) //we can get the values from the slice by using the index
 	fmt.Println("slice[6] =",slice[6]) //we can get the value from the slice by using the index
@@ -48,11 +48,11 @@ func sliceTest(){
 	both := append(slice, slice2...) //we can add the two slices by using the ... operator
 	fmt.Println("both =",both)
 
-	slice3 := make([]int32, 3, 5) //make is used to create the slice with the given length and capacity
+	slice3 := make([]int8, 3, 5) //make is used to create the slice with the given length and capacity
 	fmt.Println("slice3 =",slice3)
 	fmt.Printf("before append the slice3 length is %v and the capacity is %v\n", len(slice3), cap(slice3))
 	//slice3[0] = 10 or
-	slice3 = []int32{10, 20, 30, 40, 50} //we can add the values in the slice
+	slice3 = []int8{10, 20, 30, 40, 50} //we can add the values in the slice
 	fmt.Println("slice3 =",slice3)
 
 	strslice := []string{"hello", "im"}
