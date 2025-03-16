@@ -9,3 +9,4 @@ complier dont throw error in run time
 
 array in go is fixed Length, same data type, indexable (for sure), save in contiguous memory location
 
+loop in map will return a random order everyTime its run

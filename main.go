@@ -10,8 +10,8 @@ func main() {
 	fmt.Println("Hello, i'm Suresh")
 	fmt.Println("-----------------")
 	//var_declaration()
-	printMe("Suresh")
-	add(10, 20)
+	//printMe("Suresh")
+	//add(10, 20)
 	mul, div, err := mulANDdiv(10, 5) // (10,0) or (0,10)
 	// && and
 	// || or
@@ -30,10 +30,13 @@ func main() {
 	println(len(xx))
 	*/
 	
-	testme2(10)
-	testme3(0)
-	arrayTest()
-	sliceTest()
+	//testme2(10)
+	//testme3(0)
+	//arrayTest()
+	//sliceTest()
+
+	//mapTest()
+	loopTest()
 
 	//var text string = "Hello, World, World"
 	//text2 := strings.Replace(text, "World", "Suresh", -1)

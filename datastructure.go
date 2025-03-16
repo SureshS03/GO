@@ -82,3 +82,80 @@ func sliceTest(){
 	//same as the byte slice but rune is used for the unicode8 values
 
 }
+
+func mapTest(){
+	var myMap map[string]string = map[string]string{"name":"suresh","favGame":"valo","clg":"MGR"}
+	fmt.Println("Mymap = ", myMap)
+	
+	//or else
+	var myMap2 = map[string]bool{"haveName":true,"havePet":false}
+	fmt.Println(myMap2)
+	
+	myMap3 := map[int]string{5:"suresh"} // a key can be anything ig
+	fmt.Println(myMap3)
+	//fmt.Println(myMap3[5])
+
+	//to access it
+	fmt.Println(myMap["name"])
+
+	//maps in go always gives a value, even its not there means its gives its default value i.e 0 for int, empty space for string
+	fmt.Println(myMap["clg"])
+
+	//we can handle the above problem by decleare a error handler when we accessing it
+	var name, ok = myMap["name"]
+	if ok{
+		fmt.Printf("my name is %v\n",name)
+	} else {
+		fmt.Println("i dont have a name")
+	}
+
+	var age, ageok = myMap["age"]
+
+	if ageok {
+		fmt.Printf("my age is %v\n",age)
+	} else {
+		fmt.Println("i dont have a age")
+	}
+
+	//to delete something in map
+	delete(myMap3, 5) //1st is variable, 2nd is key
+	fmt.Println(myMap3)
+
+}
+
+func loopTest() {
+	var myMap map[string]string = map[string]string{"name":"suresh","favGame":"valo","clg":"MGR"}
+
+	//NOTE loop in map will return a random order everyTime its run
+	for x:= range myMap { //the x will be the key in the map
+		fmt.Println(x) //print only the x name, favGame, clg
+	}
+
+	for z, y:= range myMap {
+		fmt.Printf("key = %v and value = %v\n",z, y) //z is key and y is value
+	}
+
+	var myarr = [3]uint16{56,34,12}
+	//in array we dont get in random order, its only in index order
+	for arr:= range myarr {
+		fmt.Println(arr) //same this will print only the index
+	}
+
+	for index, value := range myarr {
+		fmt.Printf("index = %v, value = %v\n",index, value)
+	}
+
+	for i:= 0; i<=10; i++ { //c like loop
+		fmt.Println(i)
+	}
+	//go dont have while loop but we can achive it by for loop itself
+	var i uint16 = 1
+	
+	for i <=10 { 
+		printMe("im suresh") //i defined a func
+		i = i +1
+	} //or else we can make the condition inside the in if statement with break key word
+
+	//i++, i--, i+=10, i /=10, i *=10
+	
+}
