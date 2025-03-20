@@ -36,7 +36,8 @@ func main() {
 	//sliceTest()
 
 	//mapTest()
-	loopTest()
+	//loopTest()
+	testPoniters()
 
 	//var text string = "Hello, World, World"
 	//text2 := strings.Replace(text, "World", "Suresh", -1)
