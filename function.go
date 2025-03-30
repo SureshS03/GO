@@ -5,7 +5,7 @@ import (
 	"errors";
 )
 
-func printMe(name string) {
+func PrintMe(name string) {
 	fmt.Println(name)
 }
 
