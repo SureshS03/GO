@@ -37,9 +37,10 @@ func main() {
 
 	//mapTest()
 	//loopTest()
-	//testPoniters()
+	testPoniters()
 	//TestStrings()
-	textstruct()
+	//textstruct()
+	//testGenerics()
 
 	//var text string = "Hello, World, World"
 	//text2 := strings.Replace(text, "World", "Suresh", -1)
