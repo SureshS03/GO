@@ -31,7 +31,6 @@ func loopTest() {
 	var i uint16 = 1
 	
 	for i <=10 { 
-		printMe("im suresh") //i defined a func
 		i = i +1
 	} //or else we can make the condition inside the in if statement with break key word
 

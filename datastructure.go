@@ -23,7 +23,7 @@ func arrayTest(){
 	//to know the memory address of the array
 	fmt.Printf("Memory address of arr3 is %v\n", &arr3) //& is used to get the memory address of the variable
 	fmt.Printf("Memory address of 0 is %v\n", &arr3[0]) //the 0 is the index of the array is same as the memory address of the array
-	fmt.Printf("Memory address of 1 is %v\n", &arr3[1]) //the 1 is the index of the array is +4 bytes from the memory address of the 0 index
+	fmt.Printf("Memory address of 1 is %v\n", &arr3[1]) //the 1 is the index of the array is +4 bytes bcz we use 32bit means 4 x 8 bytes (1 bit = 8 bytes) from the memory address of the 0 index
 	fmt.Printf("Memory address of 2 is %v\n", &arr3[2]) //the 2 is the index of the array is +4 bytes from the memory address of the 1 index
 }
 
@@ -120,5 +120,32 @@ func mapTest(){
 	//to delete something in map
 	delete(myMap3, 5) //1st is variable, 2nd is key
 	fmt.Println(myMap3)
+
+}
+
+func memoryallocation() {
+	//slice in go are reference type which means while u copy a slice to another slice it will just copy the data's element pointer
+	//its not create a new memory space for the data but it will create a use space for the slice not for the data's
+	//so if u change the slice means i will effect the another slice to , so use make([]int, len()) and copy() for create a new slice with new data element space 
+
+	var list []int8 = []int8{1, 2, 3, 4, 5}
+	var copylist = list //get e data's pointer value
+	fmt.Println("list before change the copy list",list)
+	copylist[2] = 69 // affect both slice
+	fmt.Printf("list %v address is\n",list,)
+	fmt.Printf("copy list %v address is\n",copylist)
+	fmt.Printf("addres of list %p\n",&list) // this slice stored in different place
+	fmt.Printf("addres of copy list %p\n",&copylist) // and slice stored in new memory but
+	//but both uses same data's element pointers 
+	for x := range list {
+		fmt.Printf("Value: %d, Address of list[%d]: %v, Address of x: %v\n", list[x], x, &list[x], &x)
+	}
+	for x := range list {
+		fmt.Printf("Value: %d, Address of copylist[%d]: %v, Address of x: %v\n", copylist[x], x, &copylist[x], &x)
+	}
+
+	// as we can see the output of the both loop that both the data's are stored in the same memory location but the pointers are stored in the different memory 
+
+	//but the array in go are value type only, so its work normally creatinig a new space for copied array
 
 }
