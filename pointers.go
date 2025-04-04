@@ -28,7 +28,7 @@ func testPoniters() {
 	fmt.Printf("list address res %p\n", &res)
 	fmt.Printf("list address res 1 %p\n", &res1)
 }
-
+// by using reference (pass the argument value as pointer) we can change the value of the original array
 func addfive(xx *[5]int)  [5]int{
 	//fmt.Println("list in add five", xx)
 	//if we do not use pointer then it will create a new array and the address will be different
